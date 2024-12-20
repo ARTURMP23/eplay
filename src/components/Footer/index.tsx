@@ -1,4 +1,11 @@
-import { Container, FooterSection, Link, Links, SectionTitle } from './styles'
+import {
+  Borda,
+  Container,
+  FooterSection,
+  Link,
+  Links,
+  SectionTitle
+} from './styles'
 
 const currentYear = new Date().getFullYear()
 
@@ -9,43 +16,39 @@ const Footer = () => (
         <SectionTitle>Categorias</SectionTitle>
         <Links>
           <li>
-            <Link>RPG</Link>
+            <Link to="/categories#rpg">RPG</Link>
           </li>
           <li>
-            <Link>Ação</Link>
+            <Link to="/categories#action">Ação</Link>
+          </li>
+
+          <li>
+            <Link to="/categories#sports">Esportes</Link>
           </li>
           <li>
-            <Link>Aventura</Link>
+            <Link to="/categories#simulation">Simulação</Link>
           </li>
           <li>
-            <Link>Esportes</Link>
-          </li>
-          <li>
-            <Link>Simulação</Link>
-          </li>
-          <li>
-            <Link>Estratégia</Link>
-          </li>
-          <li>
-            <Link>FPS</Link>
+            <Link to="/categories#fight">Luta</Link>
           </li>
         </Links>
+        <Borda />
       </FooterSection>
+
       <FooterSection>
         <SectionTitle>Acesso rápido</SectionTitle>
         <Links>
           <li>
-            <Link>Novidades</Link>
+            <Link to="/#on-sale">Promoções</Link>
           </li>
           <li>
-            <Link>Promoções</Link>
-          </li>
-          <li>
-            <Link>Em breve</Link>
+            <Link to="/#coming-soon">Em breve</Link>
           </li>
         </Links>
+        <Borda />
       </FooterSection>
       <p>{currentYear} - &copy; E-PLAY Todos os direitos reservados</p>
+      <Borda />
     </div>
   </Container>
 )
